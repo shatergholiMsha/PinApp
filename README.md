@@ -1,10 +1,12 @@
-# Nuxt Minimal Starter
+# Pinterest-style Image Grid with Nuxt3
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This project is a Pinterest-style image grid built with Nuxt3, Pinia, Bootstrap, and SCSS. It uses an infinite scroll feature and fetches images from an external API based on user search queries.
 
-## Setup
+## How to Run the Project
 
-Make sure to install dependencies:
+- git clone https://github.com/shatergholiMsha/PinApp.git
+
+## Install dependencies
 
 ```bash
 # npm
@@ -20,7 +22,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+## Run the project locally
 
 Start the development server on `http://localhost:3000`:
 
@@ -72,4 +74,14 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Architectural Decisions
+
+- Nuxt3: Chosen for its powerful features like server-side rendering, routing, and ease of building Vue.js applications.
+
+- Pinia: Used for state management, replacing Vuex for a simpler and more modern.
+
+- Bootstrap & SCSS: Bootstrap provides a responsive layout and standard UI components, while SCSS allows for custom styling and flexibility.
+
+- Infinite Scroll: Implemented using IntersectionObserver to load more images as the user scrolls to the bottom, ensuring a smooth, continuous user experience.
+
+- API Integration: I faced a CORS error when trying to use the external API directly due to browser restrictions. To resolve this, I used a local server to proxy the requests and bypass the issue.
